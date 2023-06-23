@@ -11,7 +11,7 @@ function tellMe(joke) {
   const jokeString = joke.trim().replace(/ /g, '%20');
   // VoiceRSS Speech Parameters
   VoiceRSS.speech({
-    key: 'YOUR_API_KEY_HERE',
+    key: '190d028156cc4e1096201874791c3034',
     src: jokeString,
     hl: 'en-us',
     r: 0,
@@ -24,7 +24,7 @@ function tellMe(joke) {
 // Get jokes from Joke API
 async function getJokes() {
   let joke = '';
-  const apiUrl = 'https://sv443.net/jokeapi/v2/joke/Programming?blacklistFlags=nsfw,racist,sexist';
+  const apiUrl = 'https://sv443.net/jokeapi/v2/joke/Programming?blacklistFlags=racist,sexist';
   try {
     const response = await fetch(apiUrl);
     const data = await response.json();
